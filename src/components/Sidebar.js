@@ -1,18 +1,20 @@
-import React from 'react'
+import React from "react";
+import { ListGroup } from "react-bootstrap";
 
-const Sidebar = () => {
+function Sidebar() {
+  const rooms = ["first room", "second room", "third room"];
+
   return (
-
-
-    
-    <div>Sidebar</div>
-
-
-
-
-
-
-  )
+    <>
+      <h2>Available rooms</h2>
+      <ListGroup>
+        {rooms.map((room, ind) => (
+          <ListGroup.Item>{room}</ListGroup.Item>
+        ))}
+      </ListGroup>
+      <h2>Memebers</h2>
+    </>
+  );
 }
 
-export default Sidebar
+export default Sidebar;
